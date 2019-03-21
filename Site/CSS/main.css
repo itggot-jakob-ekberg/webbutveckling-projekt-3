@@ -26,26 +26,40 @@ body{
 header{
     background-color: rgb(66, 99, 88);
     width: 100vw;
-    height: 100px;
+    height: 380px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     position: fixed;
-    top: 0;
+    top: -280px;
     z-index: 100;
 }
 
 .activate{
-    height: 380px;
+    top: 0;
 }
 
-.a_activate{
-    display: block;
+ul{
+    position: absolute;
+    top: -80%;
+    list-style-type: none;
+}
+
+li{
+    margin: 25px;
 }
 
 a{
-    display: none;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
+
+.a_activate{
+    top: 0;
+}
+
+
 
 h2{
     color: white;

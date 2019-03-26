@@ -6,6 +6,7 @@ body{
     background-color: rgb(32, 55, 50);
 }
 
+
 .gridcontainer{
     margin-top: 100px;
     margin-left: 20px;
@@ -22,16 +23,49 @@ body{
     "a6 b6" ;
 }
 
+#abgrid{
+    grid-template-rows: 50px 50px 1.5fr;
+    grid-template-areas: 
+    "a1 b1"
+    "a2 b2"
+    "a3 b3" ;
+}
+
+#prodgrid{
+    grid-template-rows: 50px 50px 1.5fr 50px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "a1 b1"
+    "a2 b2"
+    "a3 b3"
+    "sep1 sep2"
+    "a4 b4"
+    "a5 b5"
+    "a6 b6"
+    "a7 b7"
+    "a8 b8" ;
+}
+
+#sep1{
+    grid-area: sep1 sep2;
+    margin: auto;
+}
+
+p{
+    font-size: 1.7rem;
+    color: white;
+    grid-column: span 2;
+
+}
 
 header{
     background-color: rgb(66, 99, 88);
     width: 100vw;
-    height: 380px;
+    height: 300px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     position: fixed;
-    top: -280px;
+    top: -200px;
     z-index: 100;
 }
 
@@ -39,27 +73,61 @@ header{
     top: 0;
 }
 
-ul{
+.listcontainer{
+    width: 90vw;
     position: absolute;
-    top: -80%;
-    list-style-type: none;
-}
+    top: -80%; 
+    display: grid;
+    grid-template-rows: 70px 5px 70px 5px 70px 5px 70px;
 
-li{
-    margin: 25px;
 }
 
 a{
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin: 20px;
 }
 
 .a_activate{
     top: 0;
 }
 
+.tempbox{
+    background-image: url("../Img/Deep\ blue.png");
+    grid-column: span 2;
+}
 
+li{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    grid-column: span 2;
+    font-size: 1.3rem;
+}
+
+ul{
+    grid-column: span 2;
+}
+
+.button{
+    width: 200px;
+    height: 60px;
+    background-color:#EBDF79;
+    border-radius: 20px;
+    grid-column: span 2;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button strong{
+    font-size: 1.5rem;
+    color: black;
+    margin: 0;
+}
 
 h2{
     color: white;
@@ -94,7 +162,7 @@ i.material-icons{
 
 .seperator{
     background-color: white;
-    height: 10px;
+    height: 5px;
     width: 100%;
     grid-column: span 2;
     border-radius: 10px;

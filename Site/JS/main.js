@@ -2,7 +2,7 @@ function menu(event){
     let hea = document.querySelector("header")
     hea.classList.toggle("activate")
 
-    let links = document.querySelector("ul")
+    let links = document.querySelector(".listcontainer")
     links.classList.toggle("a_activate")
 
     let icon = document.querySelector("#menubutton")

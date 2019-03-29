@@ -6,6 +6,9 @@ body{
     background-color: rgb(32, 55, 50);
 }
 
+#abwrap{
+    height: calc(100vh - 100px);
+}
 
 .gridcontainer{
     margin-top: 100px;
@@ -32,7 +35,8 @@ body{
 }
 
 #prodgrid{
-    grid-template-rows: 50px 50px 1.5fr 50px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 50px auto 50px auto auto 50px auto auto 50px auto;
     grid-template-areas: 
     "a1 b1"
     "a2 b2"
@@ -40,13 +44,58 @@ body{
     "sep1 sep2"
     "a4 b4"
     "a5 b5"
+    "sep3 sep4"
     "a6 b6"
+    "sep5 sep6"
     "a7 b7"
     "a8 b8" ;
 }
 
+img{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imag{
+    max-height: 375px;
+    max-width: 374px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: contain;
+}
+
+.deep{
+    background-image: url("../Img/Deepblue-mobile.png");
+    width: 374px;
+    height: 250px;
+}
+
+.gentl{
+    background-image: url("../Img/Thegentleman-mobile.png");
+    width: 300px;
+    height: 375px;
+}
+
+.tree{
+    background-image: url("../Img/Lonesome-tree-mobile.png");
+    width: 300px;
+    height: 300px;
+}
+
 #sep1{
     grid-area: sep1 sep2;
+    margin: auto;
+}
+
+#sep2{
+    grid-area: sep3 sep4;
+    margin: auto;
+}
+
+#sep3{
+    grid-area: sep5 sep6;
     margin: auto;
 }
 
@@ -67,6 +116,7 @@ header{
     position: fixed;
     top: -200px;
     z-index: 100;
+    transition: top 0.5s;
 }
 
 .activate{
@@ -78,7 +128,8 @@ header{
     position: absolute;
     top: -80%; 
     display: grid;
-    grid-template-rows: 70px 5px 70px 5px 70px 5px 70px;
+    grid-template-rows: 70px 5px 70px 5px 70px;
+    transition: top 0.5s;
 
 }
 
@@ -91,11 +142,6 @@ a{
 
 .a_activate{
     top: 0;
-}
-
-.tempbox{
-    background-image: url("../Img/Deep\ blue.png");
-    grid-column: span 2;
 }
 
 li{
@@ -135,13 +181,14 @@ h2{
     margin-bottom: 30px;
 }
 
-#Deals{
+.Deals{
     grid-area: a2;
     grid-column: span 2;
     color: white;
     margin: 10px;
     font-size: 2rem;
 }
+
 
 i.material-icons{  
     font-size: 4rem;
@@ -174,6 +221,7 @@ section{
     background-color: white;
     grid-area: a3;
     grid-column: span 2;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -183,10 +231,214 @@ section{
     width: 180px;
     height: 140px;
     margin-right: auto;
-    margin-bottom: 70px
+    margin-bottom: 70px;
 }
 
 .second{
     margin-left: auto;
     margin-right: 0;
+}
+
+
+
+
+@media only screen and (min-width: 768px){
+
+    header{
+        width: 320px;
+        height: 100%;
+        align-items: flex-end;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        transition: none;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 30px 220px auto;
+        grid-template-areas:
+        "true f1"
+        "emp-spc emp-spc"
+        "list list" ;
+    }
+
+    i.material-icons{  
+        display: none;
+    }
+
+    h2{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .listcontainer{
+        grid-area: list;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: auto;
+        position: static;
+        top: 0; 
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 70px 5px 70px 5px 70px;
+        transition: top 0.5s;
+    
+    }
+
+    .gridcontainer{
+        margin-top: 0px;
+        margin-left: 340px;
+        margin-right: 20px;
+        display: grid;
+        grid-template-columns: auto calc(100vw/6) calc(100vw/6);
+        grid-template-rows: 70px 50px auto auto auto auto;
+        grid-template-areas: 
+        "a1 b1 c1"
+        "a2 b2 c2"
+        "a3 b3 c3"
+        "a4 b4 c4"
+        "a5 b5 c5" ;
+    }
+
+    .Deals{
+        grid-area: a1;
+        grid-column: span 3;
+        margin: 10px;
+        font-size: 4rem;
+        }
+
+    .seperatorcontainer{
+        grid-area: a2;
+        grid-column: span 3;
+    }
+
+    section{
+        width: 900px;
+        height: 451px;
+        background-color: white;
+        grid-area: a3;
+        grid-column: span 1;
+        grid-row: span 3;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .picbox{
+        background-color: white;
+        width: 180px;
+        height: 140px;
+        margin: auto;
+        margin-bottom: 30px;
+        margin-right: 20px;
+    }    
+
+    .second{
+        margin-left: 20px;
+        margin-right: auto;
+    }
+
+    #pic1{
+        grid-area: b3;
+    }
+    #pic2{
+        grid-area: c3;
+    }
+    #pic3{
+        grid-area: b4;
+    }
+    #pic4{
+        grid-area: c4;
+    }
+    #pic5{
+        grid-area: b5;
+    }
+    #pic6{
+        grid-area: c5;
+    }
+
+    .prod{
+        grid-column: span 5;
+    }
+
+    #prodgrid{
+        grid-template-columns: 1fr 15px 1fr 15px 1fr ;
+        grid-template-rows: 50px 50px auto 50px auto;
+        grid-template-areas: 
+        "a1 . b1 . c1"
+        "a2 . b2 . c2"
+        "a3 . b3 . c3"
+        "sep1 . sep2 . sep3"
+        "a4 . b4 . c4" ;
+    }
+
+    .button{
+        width: 200px;
+        height: 60px;
+        background-color:#EBDF79;
+        border-radius: 20px;
+        grid-column: span 2;
+        margin-left: auto;
+        margin-right: auto;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img{
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #sep1{
+        grid-area: sep1;
+        margin: auto;
+    }
+
+    #sep2{
+        grid-area: sep2;
+        margin: auto;
+    }
+
+    #sep3{
+        grid-area: sep3;
+        margin: auto;
+    }
+
+
+
+    .deep{
+        background-image: url("../../PSD/Deepblue.png");
+        width: 374px;
+        height: 250px;
+        grid-area: a3;
+    }
+    
+    .gentl{
+        background-image: url("../Img/Thegentleman-mobile.png");
+        width: 300px;
+        height: 375px;
+        grid-area: b3;
+    }
+    
+    .tree{
+        background-image: url("../Img/Lonesome-tree-mobile.png");
+        width: 300px;
+        height: 300px;
+        grid-area: c3;
+    }
+
+    .butt1{
+        grid-area: a4;
+    }
+
+    .butt2{
+        grid-area: b4;
+    }
+
+    .butt3{
+        grid-area: c4;
+    }
+
 }

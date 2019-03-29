@@ -34,7 +34,7 @@ body{
     "a3 b3" ;
 }
 
-#prodgrid{
+.prodgrid{
     grid-template-columns: 100%;
     grid-template-rows: 50px 50px auto 50px auto auto 50px auto auto 50px auto;
     grid-template-areas: 
@@ -103,6 +103,7 @@ p{
     font-size: 1.7rem;
     color: white;
     grid-column: span 2;
+    margin: 30px;
 
 }
 
@@ -153,7 +154,8 @@ li{
 }
 
 ul{
-    grid-column: span 2;
+    margin: 0;
+
 }
 
 .button{
@@ -216,8 +218,9 @@ i.material-icons{
 }
 
 section{
+    background-image: url("../Img/Lonesome-tree-bigdeal-mobile.png");
     width: 370px;
-    height: 180px;
+    height: 185px;
     background-color: white;
     grid-area: a3;
     grid-column: span 2;
@@ -227,6 +230,7 @@ section{
 }
 
 .picbox{
+    background-image: url("../Img/Deepblue-30%.png");
     background-color: white;
     width: 180px;
     height: 140px;
@@ -240,9 +244,30 @@ section{
 }
 
 
+#pic2{
+    background-image: url("../Img/Thegentleman-30%.png");    
+}
+#pic3{
+    background-image: url("../Img/Lonesome-tree-30%.png");
+}
+
+#pic5{
+    background-image: url("../Img/Thegentleman-30%.png");
+}
+#pic6{
+    background-image: url("../Img/Lonesome-tree-30%.png");
+}
 
 
 @media only screen and (min-width: 768px){
+
+    .wrapper{
+        height: 100vh;
+    }
+
+    #abwrap{
+        height: 100vh;
+    }
 
     header{
         width: 320px;
@@ -313,6 +338,7 @@ section{
     }
 
     section{
+        background-image: url("../Img/Lonesome-tree-bigdeal.png");
         width: 900px;
         height: 451px;
         background-color: white;
@@ -361,7 +387,7 @@ section{
         grid-column: span 5;
     }
 
-    #prodgrid{
+    .prodgrid{
         grid-template-columns: 1fr 15px 1fr 15px 1fr ;
         grid-template-rows: 50px 50px auto 50px auto;
         grid-template-areas: 
@@ -407,25 +433,32 @@ section{
     }
 
 
-
+    .imag{
+        max-height: 701px;
+        max-width: 700px;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: contain;
+    }
     .deep{
-        background-image: url("../../PSD/Deepblue.png");
-        width: 374px;
-        height: 250px;
+        background-image: url("../Img/Deepblue.png");
+        width: 601px;
+        height: 401px;
         grid-area: a3;
     }
     
     .gentl{
-        background-image: url("../Img/Thegentleman-mobile.png");
-        width: 300px;
-        height: 375px;
+        background-image: url("../Img/Thegentleman.png");
+        width: 400px;
+        height: 500px;
         grid-area: b3;
     }
     
     .tree{
-        background-image: url("../Img/Lonesome-tree-mobile.png");
-        width: 300px;
-        height: 300px;
+        background-image: url("../Img/Lonesome-tree-desktop.png");
+        width: 450px;
+        height: 450px;
         grid-area: c3;
     }
 
@@ -439,6 +472,35 @@ section{
 
     .butt3{
         grid-area: c4;
+    }
+
+    .desk{
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 50px 50px auto auto auto;
+        grid-template-areas: 
+        "a1 b1"
+        "a2 b2"
+        "a3 b3"
+        "a4 b4"
+        "sep1 sep1";
+
+    }
+
+    .infobox{
+        grid-area: b3;
+    }
+
+    .buy{
+        grid-column: span 2;
+    }
+
+    .buybutton{
+        grid-area: b4;
+        margin-left: 20px;
+    }
+
+    .buy2{
+        grid-area: a3;
     }
 
 }
